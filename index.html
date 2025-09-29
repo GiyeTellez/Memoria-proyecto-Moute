@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feed Cultural Catalunya</title>
+  <!-- Vinculamos el CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎭 Cultura a Catalunya</h1>
+  </header>
+
+  <main id="feed"></main>
+
+  <script>
+    // Cargar el JSON local
+    fetch("query.json")
+      .then(response => response.json())
+      .then(data => {
+        const feed = document.getElementById("feed");
+
+        data.forEach(evento => {
+          const card = document.createElement("div");
+          card.className = "post";
+
+          card.innerHTML = `
+            <img src="${evento.imatge || 'https://via.placeholder.com/600x400'}" alt="${evento.titol}">
+            <div class="post-info">
+              <h2>${evento.titol}</h2>
+              <p>${evento.descripcio || "Sense descripció disponible."}</p>
+              <span class="date">📅 ${evento.data || "Data no disponible"}</span>
+              <span class="location">📍 ${evento.lloc || "Ubicació no disponible"}</span>
+            </div>
+          `;
+          feed.appendChild(card);
+        });
+      })
+      .catch(error => console.error("Error cargando el JSON:", error));
+  </script>
+</body>
+</html>
