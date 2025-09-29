@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOU-TE! - Proyecto Informática</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+            color: #0077b6;
+        }
+        .intro {
+            background: #e0f7fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        details {
+            margin: 15px 0;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: #0077b6;
+        }
+        summary:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
 
+    <h1>MOU-TE!</h1>
+
+    <div class="intro">
+        <p>
+            Este proyecto tiene como objetivo crear una aplicación web basada en datos abiertos de Cataluña. 
+            Queremos mostrar información de manera clara e interactiva, utilizando fuentes oficiales y herramientas modernas de programación.
+        </p>
+    </div>
+
+    <details>
+        <summary>1️⃣ Encontrar una página de datos abiertos de Cataluña</summary>
+        <p>
+            El primer paso fue buscar una página que ofreciera datasets interesantes y útiles para nuestra app web. 
+            La Generalitat de Catalunya dispone de un portal de <strong>dades obertes</strong> donde encontramos la información que necesitábamos.
+        </p>
+    </details>
+
+    <details>
+        <summary>2️⃣ Uso de la API de la Generalitat</summary>
+        <p>
+            Nos dimos cuenta de que para obtener esos datos era necesario acceder a través de una API. 
+            Esta API nos permitía consultar la información en formato estructurado (JSON), lo que es muy útil para integrarlo en nuestra aplicación.
+        </p>
+    </details>
+
+    <details>
+        <summary>3️⃣ Obtener un token de acceso</summary>
+        <p>
+            Para poder utilizar la API correctamente, era necesario registrarse y obtener un <strong>token</strong>. 
+            Este token se inserta en la URL de la API y nos da acceso al JSON completo, que contiene todos los datos que necesitábamos.
+        </p>
+    </details>
+
+    <details>
+        <summary>4️⃣ Instalación de Visual Studio Code</summary>
+        <p>
+            Una vez que teníamos acceso a los datos, instalamos <strong>Visual Studio Code</strong> como entorno de desarrollo. 
+            Desde allí comenzamos a crear la estructura de la página con <strong>HTML</strong> y <strong>CSS</strong>, y añadimos los datos del JSON para empezar a visualizarlos, 
+            aunque al inicio aparecían desordenados.
+        </p>
+    </details>
+
+</body>
+</html>
